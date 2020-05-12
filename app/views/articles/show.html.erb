@@ -1,0 +1,10 @@
+<%= link_to 'Wikinimous', articles_path %>
+
+<%= link_to 'New Article', new_article_path %>
+
+<h1><%= @article.title %></h1>
+<p><%= link_to '✏️', edit_article_path(@article.id) %></p>
+<p><%= link_to '🗑', article_path(@article.id), method: :delete, data: { confirm: "Delete #{@article.title}?" }%></p>
+
+<p><%= @article.content %></p>
+<%= link_to 'Back', articles_path %>
